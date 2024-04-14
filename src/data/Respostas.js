@@ -18,6 +18,8 @@ export const executado = {
     '----------------',
     '<span class="destaque">OLED</span>                 Preto OLED. ',
     '<span class="destaque">Branco</span>               Admiro sua visão. ',
+    '<span class="destaque">Catpuccin</span>            Tema pastel. ',
+    '<span class="destaque">Vermelho</span>             Leve para os olhos. ',
     '<span class="destaque">Padrão</span>               De volta ao básico. ',
   ],
   whois: [
@@ -90,5 +92,11 @@ export const executado = {
   ],
   padrao: [
     "Tema Padrao aplicado."
+  ],
+  catpuccin: [
+    "Tema Catpuccin aplicado."
+  ],
+  vermelho: [
+    "Tema Vermelho aplicado."
   ]
 };

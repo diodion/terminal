@@ -3,7 +3,7 @@ import './Terminal.css';
 import Neofetch from './components/Neofetch';
 import Comando from './components/Comando';
 import Tema from './components/Tema';
-import { branco, oled, padrao } from './data/Temas';
+import { branco, oled, padrao, catpuccin, vermelho } from './data/Temas';
 
 const Terminal = () => {
   useEffect(() => {
@@ -118,6 +118,22 @@ const Terminal = () => {
           </div>
         );
         break;
+        case 'catpuccin':
+          outputComponent = (
+            <div>
+              <Comando enviado="catpuccin" />
+              <Tema cores={catpuccin} />
+            </div>
+          );
+          break;
+          case 'vermelho':
+            outputComponent = (
+              <div>
+                <Comando enviado="vermelho" />
+                <Tema cores={vermelho} />
+              </div>
+            );
+            break;
       default:
         outputComponent = <div>Comando '<span className='usuario'>{command}</span>' não reconhecido, visualize a lista de comandos com '<span className='destaque'>ajuda</span>'.</div>;
         break;
