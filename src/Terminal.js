@@ -91,7 +91,7 @@ const Terminal = () => {
         outputComponent = <Comando enviado="github" />;
         window.open(process.env.REACT_APP_GITHUB, "_blank");
         break;
-      case 'tema':
+      case 'temas':
         outputComponent = <Comando enviado="temas" />;
         break;
       case 'branco':
