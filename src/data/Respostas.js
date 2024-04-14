@@ -18,6 +18,7 @@ export const executado = {
     '----------------',
     '<span class="destaque">OLED</span>                 Preto OLED. ',
     '<span class="destaque">Branco</span>               Admiro sua visão. ',
+    '<span class="destaque">Padrão</span>               De volta ao básico. ',
   ],
   whois: [
     '<span class="destaque">Quem sou?</span>',
