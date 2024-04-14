@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+body {
+    font-family: "Fira Mono", monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5em;
+    background-color: #0C0C0C;
+    letter-spacing: normal;
+}
+
+::selection {
+    color: #211830;
+    background-color: #519975;
+}
+
+::-moz-selection {
+    color: #211830;
+    background-color: #519975;
+}
+
+.terminal-container {
+    color: white;
+    height: 100vh;
+    padding: 20px;
+}
+
+.terminal-output {
+    white-space: pre-wrap;
+}
+
+.terminal-input {
+    display: flex;
+}
+
+.input-span {
+    margin-right: 5px;
+}
+
+.input-wrapper {
+    display: flex;
+    position: relative;
+}
+
+.comandos {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    outline: none;
+    font: inherit;
+    letter-spacing: normal;
+    margin-top: -1px;
+    margin-left: 3px;
+    line-height: inherit;
+    width: calc(100% - 20px);
+    caret-color: transparent;
+}
+
+.terminal-response {
+    animation: none;
+    white-space: pre-wrap;
+}
+
+.destaque {
+    color: #F2613F;
+}
+
+.margincolors {
+    margin-left: 90px;
+}
+
+.resposta {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.usuario {
+    color: blue;
+}
+
+.txt-cursor {
+    position: absolute;
+    left: calc(100% - 1px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 1.3rem;
+    background-color: rgb(255, 255, 255);
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: red
+}
+
+.fotoperfil {
+	height: 250px;
+	width: 250px;
+}
