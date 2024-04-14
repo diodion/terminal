@@ -1,4 +1,3 @@
-// Ajuda.js
 import React from 'react';
 import useDigitando from './../hooks/useDigitando';
 import { executado } from './../data/Respostas';

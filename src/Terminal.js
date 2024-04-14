@@ -30,7 +30,7 @@ const Terminal = () => {
     setCommandHistory([...commandHistory, inputValue]);
 
     let outputComponent = null;
-
+    
     switch (command) {
       case 'clear':
         setOutputHistory([]);
@@ -40,25 +40,41 @@ const Terminal = () => {
         break;
       case 'whois':
         outputComponent = <Comando enviado="whois" />;
-        document.title = 'diego@dev ~/whois';
+        document.title = 'diego@dev:$ ~/whois';
         break;
       case 'ajuda':
         outputComponent = <Comando enviado="ajuda" />;
-        document.title = 'diego@dev ~/ajuda';
+        document.title = 'diego@dev:$ ~/ajuda';
         break;
-      case 'neofetch':
+      case 'fetch':
         outputComponent = <Neofetch />;
-        document.title = 'diego@dev';
+        document.title = 'diego@dev:$ ~/fetch';
+        break;
+      case 'email':
+        outputComponent = <Comando enviado="email"  />;
+        document.title = 'diego@dev:$ ~/email';
+        break;
+      case 'about':
+        outputComponent = <Comando enviado="about"  />;
+        document.title = 'diego@dev:$ ~/about';
         break;
       case 'refresh':
         window.location.reload();
         break;
       case 'social':
         outputComponent = <Comando enviado="social" />;
-        document.title = 'diego@dev ~/social';
+        document.title = 'diego@dev:$ ~/social';
+        break;
+      case 'linkedin':
+        outputComponent = <Comando enviado="linkedin" />;
+        window.open(process.env.REACT_APP_LINKEDIN, "_blank");
+        break;
+      case 'github':
+        outputComponent = <Comando enviado="github" />;
+        window.open(process.env.REACT_APP_GITHUB, "_blank");
         break;
       default:
-        outputComponent = <div>Comando '{command}' não reconhecido, visualize a lista de comandos com '<span class='destaque'>ajuda</span>'.</div>;
+        outputComponent = <div>Comando '<span className='usuario'>{command}</span>' não reconhecido, visualize a lista de comandos com '<span className='destaque'>ajuda</span>'.</div>;
         break;
     }
 
@@ -96,7 +112,7 @@ const Terminal = () => {
         ))}
       </div>
       <form className="terminal-input" onSubmit={handleSubmit}>
-      <span className='input-span'><span className='usuario'>diego@dev</span>:<span className='destaque'>~</span>$</span>
+        <span className='input-span'><span className='usuario'>diego@dev</span>:<span className='destaque'>~</span>$</span>
         <div className="input-wrapper">
           <input
             type="text"

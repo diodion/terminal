@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
@@ -8,24 +7,22 @@ body {
     padding: 0;
     margin: 0;
     line-height: 1.5em;
-    background-color: #0C0C0C;
+    background-color: #1f1f1f;
     letter-spacing: normal;
-    
 }
 
 ::selection {
-    color: #211830;
-    background-color: #519975;
+    color: #534F7C;
+    background-color: #E0E0E0;
 }
 
 ::-moz-selection {
-    color: #211830;
-    background-color: #519975;
+    color: #534F7C;
+    background-color: #E0E0E0;
 }
 
 .terminal-container {
-    color: white;
-    height: 100vh;
+    color: #aca083;
     padding: 20px;
 }
 
@@ -44,6 +41,7 @@ body {
 .input-wrapper {
     display: flex;
     position: relative;
+    width: 100%;
 }
 
 .comandos {
@@ -68,7 +66,7 @@ body {
 }
 
 .destaque {
-    color: #F2613F;
+    color: #1d8b1d;
 }
 
 .margincolors {
@@ -81,7 +79,7 @@ body {
 }
 
 .usuario {
-    color: blue;
+    color: #a31c17;
 }
 
 .txt-cursor {
@@ -91,7 +89,7 @@ body {
     transform: translateY(-50%);
     width: 10px;
     height: 1.3rem;
-    background-color: rgb(255, 255, 255);
+    background-color: #E0E0E0;
     animation: blinker 1s linear infinite;
 }
 
@@ -107,10 +105,10 @@ a {
 }
 
 a:hover {
-    color: red
+    color: #1d8b1d;
 }
 
 .fotoperfil {
-	height: 250px;
-	width: 250px;
+    height: 250px;
+    width: 250px;
 }

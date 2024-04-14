@@ -9,11 +9,20 @@ const useDigitando = (lines) => {
       const intervalId = setInterval(() => {
         setDisplayText((prevText) => prevText + lines[index] + '\n');
         setIndex((prevIndex) => prevIndex + 1);
-      }, 25); // Adjust typing speed here (in milliseconds)
+      }, 40); 
 
       return () => clearInterval(intervalId);
     }
   }, [index, lines]);
+
+  useEffect(() => {
+    if (displayText) {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+  }, [displayText]);
 
   return displayText;
 };
