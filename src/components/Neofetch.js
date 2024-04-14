@@ -14,7 +14,7 @@ const NeofetchList = styled.ul`
 `;
 
 const Destaque = styled.span`
-	color: #a31c17;
+	color: var(--usuario);
 `;
 
 const Block = styled.div`
@@ -58,8 +58,8 @@ const Neofetch = () => {
 				</NeofetchList>
 			</NeofetchOutputContainer>
 			<div className='resposta'>
-				<span>Ei, Me chamo Diego Gomes... boas-vindas!</span><br />
-				<span>Esse é um terminal com um pouco sobre mim e projetos!</span><br />
+				<span>Ei, me chamo Diego Gomes... boas-vindas!</span><br />
+				<span>Esse é um terminal com um pouco sobre mim e projetos.</span><br />
 				<span>Para começar a interagir digite '<span className='destaque'>ajuda</span>' para a lista de comandos.</span>
 			</div>
 		</>

@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    --bg: #1f1f1f;
+    --destaque: #1d8b1d;
+    --usuario: #a31c17;
+    --fonte: #aca083;
+    --fonte-inv: #534F7C;
+    --bg-inv: #E0E0E0;
+}
 
 body {
     font-family: "Fira Mono", monospace;
@@ -7,22 +14,22 @@ body {
     padding: 0;
     margin: 0;
     line-height: 1.5em;
-    background-color: #1f1f1f;
+    background-color: var(--bg) ;
     letter-spacing: normal;
 }
 
 ::selection {
-    color: #534F7C;
-    background-color: #E0E0E0;
+    color: var(--fonte-inv);
+    background-color: var(--bg-inv);
 }
 
 ::-moz-selection {
-    color: #534F7C;
-    background-color: #E0E0E0;
+    color: var(--fonte-inv);
+    background-color: var(--bg-inv);
 }
 
 .terminal-container {
-    color: #aca083;
+    color: var(--fonte);
     padding: 20px;
 }
 
@@ -66,7 +73,7 @@ body {
 }
 
 .destaque {
-    color: #1d8b1d;
+    color: var(--destaque);
 }
 
 .margincolors {
@@ -79,7 +86,7 @@ body {
 }
 
 .usuario {
-    color: #a31c17;
+    color: var(--usuario);
 }
 
 .txt-cursor {
@@ -105,11 +112,11 @@ a {
 }
 
 a:hover {
-    color: #1d8b1d;
+    color: var(--usuario);
 }
 
 .destaque a:hover {
-    color: #a31c17;
+    color: var(--usuario);
 
 }
 

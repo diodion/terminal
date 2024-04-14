@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import './Terminal.css';
 import Neofetch from './components/Neofetch';
 import Comando from './components/Comando';
+import Tema from './components/Tema';
+import { branco, oled, padrao } from './data/Temas';
 
 const Terminal = () => {
   useEffect(() => {
@@ -24,13 +26,24 @@ const Terminal = () => {
     setInputValue(event.target.value);
   };
 
+  const [tema, setTema] = useState(null); // Initialize with null
+
+  useEffect(() => {
+    const temaSalvo = localStorage.getItem('tema');
+    if (temaSalvo) {
+      const temaRecuperado = JSON.parse(temaSalvo);
+      setTema(temaRecuperado);
+    }
+  }, []);
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const command = inputValue.trim().toLowerCase();
     setCommandHistory([...commandHistory, inputValue]);
 
     let outputComponent = null;
-    
+
     switch (command) {
       case 'clear':
         setOutputHistory([]);
@@ -51,18 +64,19 @@ const Terminal = () => {
         document.title = 'diego@dev:$ ~/fetch';
         break;
       case 'email':
-        outputComponent = <Comando enviado="email"  />;
+        outputComponent = <Comando enviado="email" />;
         document.title = 'diego@dev:$ ~/email';
         break;
       case 'about':
-        outputComponent = <Comando enviado="about"  />;
+        outputComponent = <Comando enviado="about" />;
         document.title = 'diego@dev:$ ~/about';
         break;
-        case 'projetos':
-          outputComponent = <Comando enviado="projetos"  />;
-          document.title = 'diego@dev:$ ~/projetos';
-          break;
+      case 'projetos':
+        outputComponent = <Comando enviado="projetos" />;
+        document.title = 'diego@dev:$ ~/projetos';
+        break;
       case 'refresh':
+        outputComponent = "Atualizando página..."
         window.location.reload();
         break;
       case 'social':
@@ -76,6 +90,33 @@ const Terminal = () => {
       case 'github':
         outputComponent = <Comando enviado="github" />;
         window.open(process.env.REACT_APP_GITHUB, "_blank");
+        break;
+      case 'tema':
+        outputComponent = <Comando enviado="temas" />;
+        break;
+      case 'branco':
+        outputComponent = (
+          <div>
+            <Comando enviado="branco" />
+            <Tema cores={branco} />
+          </div>
+        );
+        break;
+      case 'oled':
+        outputComponent = (
+          <div>
+            <Comando enviado="oled" />
+            <Tema cores={oled} />
+          </div>
+        );
+        break;
+      case 'padrao':
+        outputComponent = (
+          <div>
+            <Comando enviado="padrao" />
+            <Tema cores={padrao} />
+          </div>
+        );
         break;
       default:
         outputComponent = <div>Comando '<span className='usuario'>{command}</span>' não reconhecido, visualize a lista de comandos com '<span className='destaque'>ajuda</span>'.</div>;
@@ -106,7 +147,8 @@ const Terminal = () => {
 
   return (
     <div className="terminal-container">
-      {showNeofetch && <Neofetch />} {/* Render Neofetch component conditionally */}
+      {tema && <Tema cores={tema} />}
+      {showNeofetch && <Neofetch />}
       <div className="terminal-output">
         {commandHistory.map((command, index) => (
           <div key={index}>

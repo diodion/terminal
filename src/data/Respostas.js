@@ -7,10 +7,17 @@ export const executado = {
     '<span class="destaque">projetos</span>             Principais projetos, confira o resto no github!',
     '<span class="destaque">social</span>               Meu linkedin e github.',
     '<span class="destaque">email</span>                Se preferir vá em frente.',
+    '<span class="destaque">temas</span>                Mude o visual.',
     '<span class="destaque">ajuda</span>                Exibe os comandos disponíves... você está usando ele sabia?',
     '<span class="destaque">fetch</span>                Já tentou usar fetch em um humano?',
     '<span class="destaque">refresh</span>              Atualiza... a página.',
     '<span class="destaque">clear</span>                Limpa a tela.',
+  ],
+  temas: [
+    '<span class="destaque">Temas</span>',
+    '----------------',
+    '<span class="destaque">OLED</span>                 Preto OLED. ',
+    '<span class="destaque">Branco</span>               Admiro sua visão. ',
   ],
   whois: [
     '<span class="destaque">Quem sou?</span>',
@@ -73,5 +80,14 @@ export const executado = {
   ],
   linkedin: [
     "Abrindo Linkedin..."
+  ],
+  oled: [
+    "Tema OLED aplicado."
+  ],
+  branco: [
+    "Tema Branco aplicado."
+  ],
+  padrao: [
+    "Tema Padrao aplicado."
   ]
 };
