@@ -58,7 +58,7 @@ const Neofetch = () => {
 				</NeofetchList>
 			</NeofetchOutputContainer>
 			<div className='resposta'>
-				<span>Olá, Me chamo Diego Gomes.</span><br />
+				<span>Ei, Me chamo Diego Gomes... boas-vindas!</span><br />
 				<span>Esse é um terminal com um pouco sobre mim e projetos!</span><br />
 				<span>Para começar a interagir digite '<span className='destaque'>ajuda</span>' para a lista de comandos.</span>
 			</div>

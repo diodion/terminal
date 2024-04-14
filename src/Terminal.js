@@ -58,6 +58,10 @@ const Terminal = () => {
         outputComponent = <Comando enviado="about"  />;
         document.title = 'diego@dev:$ ~/about';
         break;
+        case 'projetos':
+          outputComponent = <Comando enviado="projetos"  />;
+          document.title = 'diego@dev:$ ~/projetos';
+          break;
       case 'refresh':
         window.location.reload();
         break;

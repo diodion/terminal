@@ -108,6 +108,11 @@ a:hover {
     color: #1d8b1d;
 }
 
+.destaque a:hover {
+    color: #a31c17;
+
+}
+
 .fotoperfil {
     height: 250px;
     width: 250px;
