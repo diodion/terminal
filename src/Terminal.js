@@ -40,19 +40,22 @@ const Terminal = () => {
         break;
       case 'whois':
         outputComponent = <Comando enviado="whois" />;
-        document.title = 'diego@dev ~ whois/';
+        document.title = 'diego@dev ~/whois';
         break;
       case 'ajuda':
         outputComponent = <Comando enviado="ajuda" />;
-        document.title = 'diego@dev ~ ajuda/';
+        document.title = 'diego@dev ~/ajuda';
         break;
       case 'neofetch':
         outputComponent = <Neofetch />;
         document.title = 'diego@dev';
         break;
+      case 'refresh':
+        window.location.reload();
+        break;
       case 'social':
         outputComponent = <Comando enviado="social" />;
-        document.title = 'diego@dev ~ social/';
+        document.title = 'diego@dev ~/social';
         break;
       default:
         outputComponent = <div>Comando '{command}' não reconhecido, visualize a lista de comandos com '<span class='destaque'>ajuda</span>'.</div>;

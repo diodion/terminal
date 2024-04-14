@@ -11,6 +11,7 @@ export const executado = {
     '<span class="destaque">email</span>                Se for seu meio de contato vá em frente.',
     '<span class="destaque">ajuda</span>                Exibe os comandos disponíves... você está usando ele sabia?',
     '<span class="destaque">neofetch</span>             Já tentou dar neofetch em um ser humano?',
+    '<span class="destaque">refresh</span>              Atualiza... a página',
     '<span class="destaque">clear</span>                Limpa a tela',
   ],
   whois: [

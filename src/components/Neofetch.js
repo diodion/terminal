@@ -30,7 +30,7 @@ const Block = styled.div`
 `;
 
 const Foto = styled.div`
-	margin-top: 50px;
+	margin-top: 35px;
 `;
 
 const Neofetch = () => {
@@ -59,7 +59,7 @@ const Neofetch = () => {
 			</NeofetchOutputContainer>
 			<div className='resposta'>
 				<span>Olá, Me chamo Diego Gomes.</span><br />
-				<span>Este é meu site com um pouco sobre mim e projetos!</span><br />
+				<span>Esse é um terminal com um pouco sobre mim e projetos!</span><br />
 				<span>Para começar a interagir digite '<span class='destaque'>ajuda</span>' para a lista de comandos.</span>
 			</div>
 		</>
