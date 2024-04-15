@@ -29,7 +29,7 @@ export const executado = {
     "Me chamo Diego e amo criar soluções para meu dia-a-dia com a programação, tenho experiência",
     "como técnico, suporte e infraestrutura e tenho desenvolvimento como uma paixão.",
     "Trabalhei desde o atendimento a clientes a suporte em bancos, criando experiência com SAS,",
-    "SAP, SQL, CICS, manuntenção de dispositivos e diversos sitemas. Criei esse site no molde de",
+    "SAP, SQL, CICS, manutenção de dispositivos e diversos sitemas. Criei esse site no molde de",
     "um terminal por inspiração das minhas experiências e por adorar Linux!",
     "Em meus projetos utilizo C# (.NET), Python (Para automação de tarefas), Javascript (React",
     "como esse terminal e Node). Estou focado a me aprofundar cada vez mais em .NET.",
